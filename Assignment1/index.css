@@ -1,0 +1,147 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.btn-outline {
+    background: none;
+    border: 2px solid #ff52bf;
+    color: #ff52bf;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.hero {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background: #ff52bf;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 40px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 60px 20%;
+    background: #fff;
+}
+
+.stats div {
+    text-align: center;
+}
+
+.features {
+    padding: 80px 10%;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.feature:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.feature img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.cta {
+    background: #ffffff;
+    color: #000000;
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.footer {
+    padding: 5rem;
+    background: hsl(192, 100%, 9%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .about,
+  .sign-in section {
+    max-width: 420px;
+    margin: 0 1rem;
+  }
+  #footer-logo {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(125deg)
+      brightness(103%) contrast(103%);
+    margin-bottom: 1.5rem;
+  }
+
+
+
+
+  @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .stats {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .feature {
+        flex-direction: column;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
