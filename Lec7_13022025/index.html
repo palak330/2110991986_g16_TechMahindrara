@@ -6,9 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-
+<p>hiii</p>
     
-    <button id="btn-click">click</button>
+    <!-- <button id="btn-click">click</button> -->
+  
     <script>
 
 
@@ -38,11 +39,116 @@
 
 
 
+        // var count=0;
+        // document.getElementById("btn-click").
+        // addEventListener("click1" ,function(){
+        //     count++;
+        //     console.log("clicked");
+        // })
 
-        document.getElementById("btn-click").
-        addEventListener("click" ,function(){
-            console.log("clicked");
+        
+
+
+//type converion
+
+
+
+
+///EVENTLOOP
+// function a(){
+//     console.log(3);
+// }
+// function b(){
+//     console.log(4);
+// }
+// function c(){
+//     console.log(5);
+// }
+
+// setTimeout(() => {
+//     console.log(10); // After 1 second
+// }, 1000);
+
+// function d(){
+//     console.log(6);
+// }
+
+// setInterval(() => {
+//     console.log(9); // Every 2 seconds
+// }, 2000);
+
+
+
+console.log("start");
+
+
+function ureachedres(callback){
+    console.log("reached");
+    setTimeout(callback,1000);
+}
+function tablefind(callback){
+    console.log("finding");
+    setTimeout(callback,1000);
+}
+function menudiscover(callback){
+    console.log("menu discover");
+    setTimeout(callback,1000);
+}
+function pricecheck(callback){
+    console.log("price check");
+    setTimeout(callback,1000);
+}
+function starterorder(callback){
+    console.log("starter order");
+    setTimeout(callback,1000);
+}
+function maincourse(callback){
+    console.log("main course");
+    setTimeout(callback,1000);
+}
+function desser(callback){
+    console.log("dessert");
+    setTimeout(callback,1000);
+}
+function paybill(callback){
+    console.log("paybill");
+    setTimeout(callback,1000);
+}
+function leave(callback){
+    console.log("leave");
+    setTimeout(1000);
+}
+
+//CHANNING THE CALLBACK
+    // ureachedres();
+    // tablefind();
+    // menudiscover();
+    // pricecheck();
+    // starterorder();
+    // maincourse();
+    // desser();
+    // paybill();
+    // leave();
+
+
+    ureachedres(()=>{
+        tablefind(()=>{
+            menudiscover(()=>{
+                pricecheck(()=>{
+                    starterorder(()=>{
+                        maincourse(()=>{
+                            desser(()=>{
+                                paybill(()=>{
+                                    leave();
+                                })
+                            })
+                        })
+                    })
+                })
+            })
         })
+    })
+
 
 
     </script>
