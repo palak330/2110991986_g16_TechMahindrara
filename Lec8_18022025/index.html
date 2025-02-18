@@ -22,7 +22,7 @@
 
 //HIGHER ORDER FUNCTION
 
-   data=[2,4,6,8,10];
+  // data=[2,4,6,8,10];
 
 
 //    const caldouble=function(data){
@@ -79,31 +79,31 @@
 
 //OPTIMIZED 
 
-function double(insidedata){
-    var ans=insidedata*2;
-    return ans;
-}
-function half(insidedata){
-    var ans=insidedata/2;
-    return ans;
-}
-function addten(insidedata){
-    var ans=insidedata+10;
-    return ans;
-}
+// function double(insidedata){
+//     var ans=insidedata*2;
+//     return ans;
+// }
+// function half(insidedata){
+//     var ans=insidedata/2;
+//     return ans;
+// }
+// function addten(insidedata){
+//     var ans=insidedata+10;
+//     return ans;
+// }
 
-const calculatedata=function(data,callback){
-    console.log("we are inside calculate data");
-    var output=[];
-    for(let i=0;i<data.length;i++){
-        output.push(callback(data[i]));
-    }
-    return output;
-}
-// console.log(calculatedata(data,double));
-// console.log(calculatedata(data,half));
-// console.log(calculatedata(data,addten));
-// console.log(data.map(double));
+// const calculatedata=function(data,callback){
+//     console.log("we are inside calculate data");
+//     var output=[];
+//     for(let i=0;i<data.length;i++){
+//         output.push(callback(data[i]));
+//     }
+//     return output;
+// }
+// // console.log(calculatedata(data,double));
+// // console.log(calculatedata(data,half));
+// // console.log(calculatedata(data,addten));
+// // console.log(data.map(double));
 
 
 
@@ -122,6 +122,85 @@ const calculatedata=function(data,callback){
 // }
 // // console.log(data.datacal(double));
 // console.log(data.map(double));
+
+
+
+
+
+
+
+
+
+// const data = [2, 9, 16, 42, 71];
+
+// function radius(r) {
+//     return 2 * r;
+// }
+
+// function circumference(r) {
+//     return 2 * 3.14 * r;
+// }
+
+// function area(r) {
+//     return 3.14 * r * r;
+// }
+
+// function calculateData(data, callback) {
+//     console.log("We are inside calculateData");
+//     let output = [];
+//     for (let i = 0; i < data.length; i++) {
+//         output.push(callback(data[i]));
+//     }
+//     return output;
+// }
+
+// console.log("Diameters:", calculateData(data, radius));
+// console.log("Circumferences:", calculateData(data, circumference));
+// console.log("Areas:", calculateData(data, area));
+
+
+
+
+
+
+
+// const data = [2, 9, 16, 42, 71];
+
+// const diameter = data.map(r => 2 * r);
+// const circumference = data.map(r => 2 * Math.PI * r);
+// const area = data.map(r => Math.PI * r * r);
+
+// console.log("Diameter:", diameter);
+// console.log("Circumference:", circumference);
+// console.log("Area:", area);
+
+
+const data = [2, 9, 16, 42, 71];
+
+function radius(r) {
+    return 2 * r;
+}
+
+function circumference(r) {
+    return 2 * 3.14 * r;
+}
+
+function area(r) {
+    return 3.14 * r * r;
+}
+
+function calculateData(data, callback) {
+    console.log("We are inside calculateData");
+    let output = [];
+    for (let i = 0; i < data.length; i++) {
+        output.push(callback(data[i]));
+    }
+    return output;
+}
+
+console.log("Diameters:", calculateData(data, radius));
+console.log("Circumferences:", calculateData(data, circumference));
+console.log("Areas:", calculateData(data, area));
 
 
 
