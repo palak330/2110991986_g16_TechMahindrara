@@ -24,35 +24,105 @@
 
    data=[2,4,6,8,10];
 
+
+//    const caldouble=function(data){
+//     var output=[];
+//     for(let i=0;i<data.length;i++){
+//           output.push(data[i]*2);
+//     }
+//     return output;
+// }
+// console.log(caldouble(data));
+
+
+// const calhalfdouble=function(data){
+//     var output=[];
+//     for(let i=0;i<data.length;i++){
+//         output.push(data[i]/2);
+//     }
+//     return output;
+// }
+// console.log(calhalfdouble(data));
+
+
+// const caladdten=function(data){
+//     const output=[];
+//     for(let i=0;i<data.length;i++){
+//         output.push(data[i]+10);
+//     }
+//     return output;
+// }
+// console.log(caladdten(data));
+
+
+// function cal(){
+//     const output=[];
+    
+//     for(let i=0;i<data.length;i++){
+//         output.push(data[i]*2);
+//     }
    
-   const caldouble=function(data){
+//     for(let i=0;i<data.length;i++){
+//         output.push(data[i]/2);
+//     }
+    
+//     for(let i=0;i<data.length;i++){
+//         output.push(data[i]+10);
+//     }
+//     return output;
+// }
+// console.log(cal(data));
+
+
+
+
+
+//OPTIMIZED 
+
+function double(insidedata){
+    var ans=insidedata*2;
+    return ans;
+}
+function half(insidedata){
+    var ans=insidedata/2;
+    return ans;
+}
+function addten(insidedata){
+    var ans=insidedata+10;
+    return ans;
+}
+
+const calculatedata=function(data,callback){
+    console.log("we are inside calculate data");
     var output=[];
     for(let i=0;i<data.length;i++){
-          output.push(data[i]*2);
+        output.push(callback(data[i]));
     }
     return output;
 }
-console.log(caldouble(data));
+// console.log(calculatedata(data,double));
+// console.log(calculatedata(data,half));
+// console.log(calculatedata(data,addten));
+// console.log(data.map(double));
 
 
-const calhalfdouble=function(data){
-    var output=[];
-    for(let i=0;i<data.length;i++){
-        output.push(data[i]/2);
-    }
-    return output;
-}
-console.log(calhalfdouble(data));
 
 
-const caladdten=function(data){
-    const output=[];
-    for(let i=0;i<data.length;i++){
-        output.push(data[i]+10);
-    }
-    return output;
-}
-console.log(caladdten(data));
+
+//polyfill of map feature of js
+//by using prototype
+
+// Array.prototype.datacal=function(logic){
+//     var output=[];
+//     for(let i=0;i<this.length;i++){
+//         output.push(this[i]);
+//     }
+//     return output;
+
+// }
+// // console.log(data.datacal(double));
+// console.log(data.map(double));
+
 
 
     </script>
