@@ -6,17 +6,45 @@
     <title>Document</title>
 </head>
 <body>
-
+<p>hello</p>
     <script>
-function x(){
-   console.log("i am x");
+// function x(){
+//    console.log("i am x");
     
+// }
+// function y(args){             //higher order function(function hi pass krte hai)
+//     console.log("i am y");
+//     args();
+// }
+// y(x);
+
+
+
+//HIGHER ORDER FUNCTION
+
+ data=[2,4,6,8,10];
+// const caldouble=function(data){
+//     var output=[];
+//     for(let i=0;i<data.length;i++){
+//           output.push(data[i]*2);
+//     }
+//     return output;
+// }
+// console.log(caldouble(data));
+
+
+const calhalfdouble=function(data){
+    var output=[];
+    for(let i=0;i<data.length;i++){
+        output.push(data[i]/2);
+    }
+    return output;
 }
-function y(args){             //higher order function(function hi pass krte hai)
-    console.log("i am y");
-    args();
-}
-y(x);
+console.log(calhalfdouble(data));
+
+
+
+
     </script>
 
 </body>
