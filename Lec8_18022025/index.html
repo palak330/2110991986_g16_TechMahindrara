@@ -22,15 +22,17 @@
 
 //HIGHER ORDER FUNCTION
 
- data=[2,4,6,8,10];
-// const caldouble=function(data){
-//     var output=[];
-//     for(let i=0;i<data.length;i++){
-//           output.push(data[i]*2);
-//     }
-//     return output;
-// }
-// console.log(caldouble(data));
+   data=[2,4,6,8,10];
+
+   
+   const caldouble=function(data){
+    var output=[];
+    for(let i=0;i<data.length;i++){
+          output.push(data[i]*2);
+    }
+    return output;
+}
+console.log(caldouble(data));
 
 
 const calhalfdouble=function(data){
@@ -43,6 +45,14 @@ const calhalfdouble=function(data){
 console.log(calhalfdouble(data));
 
 
+const caladdten=function(data){
+    const output=[];
+    for(let i=0;i<data.length;i++){
+        output.push(data[i]+10);
+    }
+    return output;
+}
+console.log(caladdten(data));
 
 
     </script>
