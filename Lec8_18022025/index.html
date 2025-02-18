@@ -175,34 +175,69 @@
 // console.log("Area:", area);
 
 
-const data = [2, 9, 16, 42, 71];
-
-function radius(r) {
-    return 2 * r;
-}
-
-function circumference(r) {
-    return 2 * 3.14 * r;
-}
-
-function area(r) {
-    return 3.14 * r * r;
-}
-
-function calculateData(data, callback) {
-    console.log("We are inside calculateData");
-    let output = [];
-    for (let i = 0; i < data.length; i++) {
-        output.push(callback(data[i]));
-    }
-    return output;
-}
-
-console.log("Diameters:", calculateData(data, radius));
-console.log("Circumferences:", calculateData(data, circumference));
-console.log("Areas:", calculateData(data, area));
 
 
+
+
+
+// const data = [2, 9, 16, 42, 71];
+
+// function radius(r) {
+//     return 2 * r;
+// }
+
+// function circumference(r) {
+//     return 2 * 3.14 * r;
+// }
+
+// function area(r) {
+//     return 3.14 * r * r;
+// }
+
+// function calculateData(data, callback) {
+//     console.log("We are inside calculateData");
+//     let output = [];
+//     for (let i = 0; i < data.length; i++) {
+//         output.push(callback(data[i]));
+//     }
+//     return output;
+// }
+
+// console.log("Diameters:", calculateData(data, radius));
+// console.log("Circumferences:", calculateData(data, circumference));
+// console.log("Areas:", calculateData(data, area));
+
+
+
+
+
+//FILTER
+// const data = [2, 3, 5, 6, 7, 8];
+
+// const result = data.filter(x => x % 2 != 0);
+
+// console.log(result);
+
+
+
+
+
+const users = [
+    {firstName: "a1", lastName: "a2", age: 21},
+    {firstName: "b1", lastName: "b2", age: 23},
+    {firstName: "c1", lastName: "c2", age: 26},
+    {firstName: "d1", lastName: "d2", age: 29},
+    {firstName: "e1", lastName: "e2", age: 30},
+];
+
+// Combine first and last name
+const fullNames = users.map((user) => user.firstName + " " + user.lastName);
+console.log(fullNames);
+
+// Filter out users with age above 24 and return their full names
+const filteredUsers = users.filter((user) => user.age > 24).map((user) => user.firstName + " " + user.lastName);
+
+console.log(filteredUsers);
 
     </script>
 
