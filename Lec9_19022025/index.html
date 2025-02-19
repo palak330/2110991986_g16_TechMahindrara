@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>hello people</h2>
+    <script>
+
+
+        //REDUCE
+
+        //SUM OF ARRAY simple
+        // const arr=[5,7,8,9];
+        // var sumofarr=0;
+        // for(let i=0;i<arr.length;i++){
+        //     sumofarr+=arr[i];      //acc   curr
+        // }
+        // console.log(sumofarr);
+        // const ans=arr.reduce(function(acc,curr){  //acc->accu
+        //     acc=acc+curr;
+        //     return acc;  
+        // },0);
+        // console.log(ans);
+
+
+
+
+//WRONG WE HAVE TO DO COUNT 
+
+//         const users = [
+//     {firstName: "a1", lastName: "a2", age: 21},
+//     {firstName: "b1", lastName: "b2", age: 25},
+//     {firstName: "c1", lastName: "c2", age: 25},
+//     {firstName: "d1", lastName: "d2", age: 25},
+//     {firstName: "e1", lastName: "e2", age: 30},
+// ];
+
+
+// const ans=users.reduce(function(acc,curr){
+//     if(!acc[curr.age]) {
+//         acc[curr.age]=1;
+//     }
+//     return acc+1;
+// },0)
+// console.log(count);
+
+
+
+
+//MAX NUMBER
+
+// dataMap=[2,4,5,68,6,7];
+// var maxNum=0;
+// for(let i=0;i<dataMap.length;i++){
+//     if(maxNum<dataMap[i]){
+//         maxNum=dataMap[i];
+//     }
+// }
+// console.log(maxNum);
+
+
+// //reduce se kravaya
+// const ans=dataMap.reduce(function(acc,curr){
+// if(curr>acc){
+//     acc=curr;
+// }
+// return acc;
+// },0);
+// console.log(ans);
+
+
+
+
+
+//PROMISE
+// reachedResataurent(function(){
+//     console.log("reached");
+// })
+// .then(TableFinding)
+// .then(menuDiscover)
+// .then(pricecheck)
+// .then(starterOrder)
+// .then(maincourse)
+
+// const myRestaurnetPromise=new Promise(resolve,reject){
+//     if(1:30>time>2:30){
+//         resolve("Yes successfully reached")
+//     }
+//     else{
+//         reject("cant reach at time");
+//     }
+// }
+
+
+
+
+
+
+// const cart=["shoes", "watches","bags","shirts"];
+// createOrder(cart,callback){
+//     console.log("order creation");
+
+//     orderPayment(orderId,callback){
+//         console.log("ordered payment");
+
+//         orderSummary(orderId,callback)
+//         console.log("ordered summary");
+
+//         updateWallet(){
+//             console.log("Wallet updated");
+//         }
+//     }
+// }
+
+
+
+
+
+const cart=["shoes", "watches","bags","shirts"];
+function createOrder(cart){
+    const myPromise=new Promise(function(resolve,reject){
+        if(cart.length>0){
+            console.log("order created succesfull")
+            resolve("12345")
+        }
+        else{
+            const err=new error("order failed")
+            reject(err.message);
+        }
+    });
+    return myPromise;
+}
+// console.log(createOrder(cart));
+
+
+function orderPayment(orderId){
+    console.log("order payment succesfull")
+}
+
+function orderSummary(orderId){
+    console.log("order summary created")
+}
+
+function updateWallet(orderId){
+    console.log("wallet updated")
+}
+
+createOrder(cart)
+.then(function(orderId){
+    return orderPayment(orderId)
+})
+.then(function(orderId){
+    return orderSummary(orderId)
+})
+.then(function(orderId){
+    return updateWallet()
+})
+.catch(function(err){     
+    console.log("error occured")  //if cart is empty then this catch will handle
+    console.log(err.message);
+})
+
+
+
+
+
+
+
+// createOrder(cart)
+// .then(function orderPayment(orderId){
+//     console.log("order payment succesful");
+// })
+// .then(function orderSummary(orderId){
+//     console.log("order summary",orderId);
+// })
+
+
+//BY PROMISE
+// createOrder(cart)
+// .then(orderPayment(orderId))
+// .then(orderSummary(orderId))
+// .then(updateWallet)
+
+    </script>
+</body>
+</html>
