@@ -27,7 +27,7 @@
 
 
 
-// Memoized Fibonacci Function Using Closures
+// 2nd. Memoized Fibonacci Function Using Closures
 
 function memoizedFibonacci() {
     let cache = {};
