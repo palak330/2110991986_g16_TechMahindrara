@@ -30,13 +30,13 @@
 // 2nd. Memoized Fibonacci Function Using Closures
 
 function memoizedFibonacci() {
-    let cache = {};
+    let a = {};
 
     return function fib(n) {
         if (n <= 1) return n;
-        if (cache[n]) return cache[n];
+        if (a[n]) return a[n];
         
-        return cache[n] = fib(n - 1) + fib(n - 2);
+        return a[n] = fib(n - 1) + fib(n - 2);
     };
 }
 
