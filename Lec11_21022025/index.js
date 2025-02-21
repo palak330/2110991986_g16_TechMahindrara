@@ -75,8 +75,30 @@
 //     console.log("This is child div");
 // },true)
 
-   
-document.getElementById("computer science").addEventListener("click",()=>{
-    window.location.href="localhost/computer science"
-});
 
+
+
+   
+// document.getElementById("computer science").addEventListener("click",()=>{
+//     window.location.href="localhost/computer science"
+// });
+// document.getElementById("toc").addEventListener("click",()=>{
+//     window.location.href="localhost/computer science"
+// });
+// document.getElementById("cyber").addEventListener("click",()=>{
+//     window.location.href="localhost/computer science"
+// });
+
+
+// document.getElementById("subject").addEventListener("click",(e)=>{
+//     window.location.href=e.target.id;
+//     console.log("http://localhost/"+e.target.id);
+// })
+
+
+
+document.getElementById("searchbox").addEventListener("input",fetchData);
+function fetchData(){
+console.log("fetching api data");
+
+}
