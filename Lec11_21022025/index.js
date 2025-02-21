@@ -97,8 +97,21 @@
 
 
 
-document.getElementById("searchbox").addEventListener("input",fetchData);
+document.getElementById("searchbox").addEventListener("input",debouncing);
+let whichcall=0;
 function fetchData(){
-console.log("fetching api data");
-
+console.log("fetching api data",whichcall++);
 }
+
+
+function debouncing(){
+    setTimeout(fetchData,2000);
+}
+
+const m=new Promise(function(resolve,reject){
+	     setTimeout(()=>{
+	         resolve("correct");
+	     },4000)
+	 })
+	
+
