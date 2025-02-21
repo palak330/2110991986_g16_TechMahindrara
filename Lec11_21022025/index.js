@@ -63,18 +63,20 @@
 
 
 
-document.getElementById("grandParent").addEventListener("click",()=>{
-    console.log("This is grand Parent div");
-},true)
+// document.getElementById("grandparent").addEventListener("click",()=>{
+//     console.log("This is grand Parent div");
+// },true)
 
-document.getElementById("Parent").addEventListener("click",()=>{
-    console.log("This is Parent div");
-},true)
+// document.getElementById("parent").addEventListener("click",()=>{
+//     console.log("This is Parent div");
+// },true)
 
-document.getElementById("child").addEventListener("click",()=>{
-    console.log("This is child div");
-},true)
+// document.getElementById("child").addEventListener("click",()=>{
+//     console.log("This is child div");
+// },true)
 
    
-
+document.getElementById("computer science").addEventListener("click",()=>{
+    window.location.href="localhost/computer science"
+});
 
